@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import UserPage from './pages/UserPage';
 import MakeTransaction from './pages/MakeTransaction';
 import {

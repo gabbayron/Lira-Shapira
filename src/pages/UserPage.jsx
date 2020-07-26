@@ -1,19 +1,24 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {Tables} from '../components/Tables.jsx'
 const totalAmount = 30;
 const transactions = [
-    {    }
+    {}
 ]
 
 const UserPage = () => {
 
 
-    return ( 
+    return (
         <>
-        <h1>Hello</h1>
-        <Link to="/MakeTransaction">Make Transaction</Link>
+            <div className="jumbotron text-center">
+                <h1 className="display-4">Lira Shapira</h1>
+                <p className="lead">Simple Community Solution</p>
+            <Link className="btn btn-primary btn-lg mt-2" to="/MakeTransaction">Make Transaction</Link>
+            </div>
+            <Tables />
         </>
-     );
+    );
 }
- 
+
 export default UserPage;
