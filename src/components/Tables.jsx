@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import TableBody from './TableBody.jsx'
+import { transactions } from '../components/transactions.jsx'
 
 export const Tables = props => {
     return (
         <>
-            <h3 className="text-center mb-4">Recent Transactions</h3>
             <table className="table table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">#</th>
                         <th scope="col">From User</th>
                         <th scope="col">To User</th>
                         <th scope="col">Amount</th>
@@ -15,13 +17,17 @@ export const Tables = props => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Ron Gabbay</td>
-                        <td>Amir Lellouch</td>
-                        <td>30 LS</td>
-                        <td>25.7.2020</td>
-                    </tr>
+                    {transactions.map(trans =>
+                        <TableBody
+                            key={trans.id}
+                            id={trans.id}
+                            fromUser={trans.fromUser}
+                            toUser={trans.toUser}
+                            amount={trans.amountTransfered}
+                            date={trans.date}
+                            reason={trans.transferReason}
+                        />
+                    )}
                 </tbody>
             </table>
         </>
