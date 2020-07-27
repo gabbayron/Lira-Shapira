@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 
 
 const MakeTransaction = () => {
+
+    const handleTransaction = e => {
+        e.preventDefault()
+    }
+
     return (
         <>
             <div className="jumbotron text-center">
@@ -12,19 +17,21 @@ const MakeTransaction = () => {
             </div>
             <div className="container">
                 <h3>Transactions :</h3>
-                <label>Phone Number :
+                <form >
+                    <label>Phone Number :
                 <input className="form-control" type="text" placeholder="Phone Number" />
-                </label>
-                <br />
-                <label>Reason Of Transfer :
+                    </label>
+                    <br />
+                    <label>Reason Of Transfer :
                 <input className="form-control" type="text" placeholder="Reason Of Transfer" />
-                </label>
-                <br/>
-                <label>Amount To Transfer :
+                    </label>
+                    <br />
+                    <label>Amount To Transfer :
                 <input className="form-control" type="text" placeholder="Amount" />
-                </label>
-                <br/>
-                <button className="btn btn-primary">Make Transaction</button>
+                    </label>
+                    <br />
+                    <button className="btn btn-primary" onClick={handleTransaction}>Make Transaction</button>
+                </form>
             </div>
         </>
     );
