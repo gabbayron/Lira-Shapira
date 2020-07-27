@@ -2,7 +2,7 @@ import React from 'react';
 import TableBody from './TableBody.jsx'
 import { transactions } from '../components/transactions.jsx'
 
-export const Tables = props => {
+export const Tables = () => {
     return (
         <>
             <table className="table table-striped">
