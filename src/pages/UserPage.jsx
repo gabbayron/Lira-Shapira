@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Tables } from '../components/Tables.jsx'
-import { transactions } from '../components/transactions.jsx'
 
 
 const totalAmount = 30;
 
 const UserPage = () => {
-
-
     return (
         <>
             <div className="jumbotron jumbotron-fluid text-center">
